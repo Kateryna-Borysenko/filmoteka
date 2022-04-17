@@ -3,10 +3,12 @@
   "version": "1.1.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://SlavaLutsenko.github.io/goit-moviesProject-g1",
   "scripts": {
     "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /goit-moviesProject-g1/"
+    "main": "index.js",
+    "build": "parcel build src/*.html --public-url / /",
+    "predeploy": "npm run build",
+    "deploy": "sudo netlify deploy -p"
   },
   "repository": {
     "type": "git",
@@ -30,6 +32,7 @@
     "lodash.debounce": "^4.0.8",
     "node-sass": "^6.0.1",
     "notiflix": "^3.2.2",
-    "paginationjs": "^2.1.5"
+    "paginationjs": "^2.1.5",
+    "netlify-cli": "^9.16.6"
   }
 }
